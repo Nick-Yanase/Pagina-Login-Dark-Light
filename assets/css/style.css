@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-branco: #f8fafc;
+
+  --color-cinza-50: #797984;
+  --color-cinza-100: #312d37;
+
+  --color-preto: #000;
+
+  --color-roxo-50: #7c3aed;
+  --color-roxo-100: #a855f7;
+  --color-roxo-200: #bf46ef;
+
+  --color-gradient: linear-gradient(
+    90deg,
+    var(--color-roxo-50),
+    var(--color-roxo-100),
+    var(--color-roxo-200)
+  );
+}
+
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main.container {
+  height: 100vh;
+  width: 100%;
+  background: var(--color-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social_media img {
+  max-width: 35px;
+}
+
+.login_form {
+  background: var(--color-branco);
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  gap: 30px;
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.3);
+  
+  /*box shadow X Y borrar tamanho*/
+}
+
+.form_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social_media {
+  display: flex;
+  justify-content: space-around;
+}
+.social_media img{
+  transition: all 0.3s;
+}
+.social_media img:hover {
+  transform: scale(1.1);
+}
+.form_header h1 {
+  position: relative;
+  font-size: 40px;
+}
+
+.form_header h1::before {
+  content: " ";
+  width: 6px;
+  height: 48%;
+  background: var(--color-gradient);
+  position: absolute;
+  top: 16px;
+  left: -7px;
+
+}
+
+#mode_icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box label {
+  font-size: 14px;
+  color: var(--color-cinza-50);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  padding: 3px;
+  cursor: text;
+  border-bottom: 1px solid var(--color-roxo-50);
+}
+
+.icon i {
+  font-size: 18px;
+  color: var(--color-cinza-100);
+}
+
+.icon input {
+  border: none;
+  background: transparent;
+  width: 260px;
+  font-size: 18px;
+  padding: 0px 5px;
+}
+
+.icon input:focus {
+  outline: none; /*tira as bordas*/
+}
+
+.forgot-password a {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--color-cinza-50);
+}
+
+.forgot-password a:hover {
+  color: var(--color-roxo-50);
+}
+
+button{
+  border-radius: 4px;
+  border:none;
+  padding: 10px 0;
+  margin: 0 10%;
+  background: var(--color-gradient);
+  color: var(--color-branco);
+  font-weight: 700;
+  cursor: pointer; /*parecer clicavel*/
+  transition: all 0.3s;
+}
+
+button:hover{
+  transform: scale(1.1);
+  
+
+
